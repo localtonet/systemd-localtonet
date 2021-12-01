@@ -1,0 +1,15 @@
+[Unit]
+Description=localtonet
+After=network.target
+
+[Service]
+ExecStart=/opt/localtonet/localtonet authtoken <token> 
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+IgnoreSIGPIPE=true
+Restart=always
+RestartSec=3
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
