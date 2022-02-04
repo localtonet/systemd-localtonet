@@ -2,9 +2,11 @@
 
 Step 1: Place [`localtonet`](https://localtonet.com/download) in `/opt/localtonet/`.
 
-Step 4: Add `localtonet.service` to `/lib/systemd/system/`.
+Step 2: Add `localtonet.service` to `/lib/systemd/system/`.
 
-Step 5: Start localtonet service by typing:
+Step 3: Go dashboard and get token edit localtonet.service file <token> paste here.
+
+Step 4: Start localtonet service by typing:
 
 ```
     systemctl enable localtonet.service
