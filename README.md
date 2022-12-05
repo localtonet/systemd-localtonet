@@ -16,7 +16,7 @@ Step 4: Start localtonet service by typing:
 or just execute `install.sh` on Linux x64 platform.
 
 ```
-    curl -O https://raw.githubusercontent.com/shiftytr/systemd-localtonet/master/install.sh
+    curl -O https://raw.githubusercontent.com/localtonet/systemd-localtonet/master/install.sh
     chmod +x install.sh
     sudo ./install.sh
 ```
