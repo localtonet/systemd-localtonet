@@ -1,11 +1,13 @@
 [Unit]
 Description=localtonet
-After=network.target
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/etc/localtonet/auth-token
 
 [Service]
-ExecStart=/opt/localtonet/localtonet --authtoken <token> 
-ExecReload=/bin/kill -HUP $MAINPID
-KillMode=process
+WorkingDirectory=/opt/localtonet
+ExecStart=/opt/localtonet/localtonet --headless --authtoken-file /etc/localtonet/auth-token
+KillMode=control-group
 IgnoreSIGPIPE=true
 Restart=always
 RestartSec=3
